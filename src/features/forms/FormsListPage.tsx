@@ -166,7 +166,7 @@ export function FormsListPage() {
                       </DropdownMenuItem>
                       <DropdownMenuItem
                         onClick={() => {
-                          const url = `${location.origin}/f/${f.slug}`;
+                          const url = `${location.origin}${import.meta.env.BASE_URL}#/f/${f.slug}`;
                           navigator.clipboard.writeText(url);
                           toast.success("Share link copied");
                         }}

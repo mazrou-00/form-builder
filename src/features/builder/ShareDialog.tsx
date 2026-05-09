@@ -23,7 +23,7 @@ interface Props {
 
 export function ShareDialog({ form, open, onOpenChange }: Props) {
   const [copied, setCopied] = useState<string | null>(null);
-  const url = `${location.origin}/f/${form.slug}`;
+  const url = `${location.origin}${import.meta.env.BASE_URL}#/f/${form.slug}`;
   const embed = `<iframe src="${url}" width="640" height="800" frameborder="0"></iframe>`;
 
   function copy(label: string, val: string) {
